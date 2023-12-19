@@ -12,6 +12,7 @@ class Program
         string paper = "     _______\r\n---'    ____)____\r\n           ______)\r\n          _______)\r\n         _______)\r\n---.__________)";
         string scissors = "    _______\r\n---'   ____)____\r\n          ______)\r\n       __________)\r\n      (____)\r\n---.__(___)";
         string intro = "Rock Paper Scissors - A C# Console Based Game Created by Group 9 \nInitializing.....";
+        string err = "Press Any Key to Continue (EXCEPT THE POWER BUTTON AND RESTART BUTTON)";
 
         string RPS = "  _____            _      _____                         _____      _                        \r\n |  __ \\          | |    |  __ \\                       / ____|    (_)                       \r\n | |__) |___   ___| | __ | |__) |_ _ _ __   ___ _ __  | (___   ___ _ ___ ___  ___  _ __ ___ \r\n |  _  // _ \\ / __| |/ / |  ___/ _` | '_ \\ / _ \\ '__|  \\___ \\ / __| / __/ __|/ _ \\| '__/ __|\r\n | | \\ \\ (_) | (__|   <  | |  | (_| | |_) |  __/ |     ____) | (__| \\__ \\__ \\ (_) | |  \\__ \\\r\n |_|  \\_\\___/ \\___|_|\\_\\ |_|   \\__,_| .__/ \\___|_|    |_____/ \\___|_|___/___/\\___/|_|  |___/\r\n                                    | |                                                     \r\n                                    |_|                                                     ";
 
@@ -35,10 +36,26 @@ class Program
                     Console.Clear();
                     Console.WriteLine($"{RPS} \nInvalid Input, Please Try Again.");
                     Thread.Sleep(1000);
-                    Console.WriteLine("Press Any Key to Continue (EXCEPT THE POWER BUTTON AND RESTART BUTTON)");
+                    Console.WriteLine(err);
                     Console.ReadKey();
                     continue;
                 }
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
 
 
 
