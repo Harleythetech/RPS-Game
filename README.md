@@ -56,13 +56,6 @@ Purpose:
 ```
 The Rock, Paper, Scissors Game console application serves as a fun and interactive project for C# learners, offering hands-on experience with essential programming concepts such as user input handling, randomization, and game logic. This project encourages exploration and customization, making it suitable for those interested in creating entertaining console-based games.
 
-```
-Contributors:
-```
-[@Harleythetech](https://github.com/Harleythetech)
-[@Araguas7](https://github.com/Araguas7)
-[@CED690](https://github.com/CED690)
-
 ------------------------------------
 ```
 You have reached the end, Have Fun Playing Rock Paper Scissors :)
