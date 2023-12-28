@@ -18,14 +18,14 @@ class Program
     static int CPU = 0;
     static int modesel = 0;
     static string err = "LOG: Error Occured, Invalid Input Detected..";
-    static string RPS = "  _____            _      _____                         _____      _                        \r\n |  __ \\          | |    |  __ \\                       / ____|    (_)                       \r\n | |__) |___   ___| | __ | |__) |_ _ _ __   ___ _ __  | (___   ___ _ ___ ___  ___  _ __ ___ \r\n |  _  // _ \\ / __| |/ / |  ___/ _` | '_ \\ / _ \\ '__|  \\___ \\ / __| / __/ __|/ _ \\| '__/ __|\r\n | | \\ \\ (_) | (__|   <  | |  | (_| | |_) |  __/ |     ____) | (__| \\__ \\__ \\ (_) | |  \\__ \\\r\n |_|  \\_\\___/ \\___|_|\\_\\ |_|   \\__,_| .__/ \\___|_|    |_____/ \\___|_|___/___/\\___/|_|  |___/\r\n                                    | |                                                     \r\n                                    |_|                                                     ";
+    static string RPS = "  _____            _      _____                         _____      _                        \r\n |  __ \\          | |    |  __ \\                       / ____|    (_)                       \r\n | |__) |___   ___| | __ | |__) |_ _ _ __   ___ _ __  | (___   ___ _ ___ ___  ___  _ __ ___ \r\n |  _  // _ \\ / __| |/ / |  ___/ _` | '_ \\ / _ \\ '__|  \\___ \\ / __| / __/ __|/ _ \\| '__/ __|\r\n | | \\ \\ (_) | (__|   <  | |  | (_| | |_) |  __/ |     ____) | (__| \\__ \\__ \\ (_) | |  \\__ \\\r\n |_|  \\_\\___/ \\___|_|\\_\\ |_|   \\__,_| .__/ \\___|_|    |_____/ \\___|_|___/___/\\___/|_|  |___/ V 3.5 (stable)\r\n                                    | |                                                     \r\n                                    |_|                                                     ";
 
     static void Main()
     {
         try
         {
-            Console.WriteLine("Initializing Rock Paper Scissors.... \nCreated by Group 9 - v3");
-            Thread.Sleep(1000);
+            Console.WriteLine("Initializing Rock Paper Scissors.... \nCreated by Group 9 - v3.5 (Stable Release) \n\nRelease: https://github.com/Harleythetech/RPS-Game/releases/latest");
+            Thread.Sleep(3000);
             do
             {
                 Console.Clear();
@@ -93,6 +93,7 @@ class Program
                     {
                         Console.Clear();
                         Console.WriteLine($"{RPS}\nPlayer VS CPU ({cpuid}) | SCORE: P1 - {PC} / CPU - {CPU}");
+                        Thread.Sleep(1000);
                         Console.Write($"\n{clap}\n\nIt's a Tie Try Again, Do you want to Continue? Y/N ");
                         if (Console.ReadKey().Key == ConsoleKey.N)
                         {
@@ -127,6 +128,7 @@ class Program
                         Console.Clear();
                         Console.WriteLine($"{RPS}\nPlayer VS CPU ({cpuid}) | SCORE: P1 - {PC} / CPU - {CPU}");
                         Console.WriteLine($"\nCPU win! \n{clap}");
+                        Thread.Sleep(1000);
                         Console.Write($"\nA point has been added to CPU, Do you want to Continue? Y/N ");
                         CPU++;
                         if (Console.ReadKey().Key == ConsoleKey.N)
@@ -178,6 +180,7 @@ class Program
                     {
                         Console.Clear();
                         Console.WriteLine($"{RPS}\nPlayer VS Player | SCORE: P1 - {P1} / P2 - {P2}");
+                        Thread.Sleep(1000);
                         Console.Write($"\n{clap}\n\nIt's a Tie, Try Again. Do you want to Continue? Y/N ");
                         if (Console.ReadKey().Key == ConsoleKey.N)
                         {
