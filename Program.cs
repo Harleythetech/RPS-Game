@@ -10,6 +10,8 @@ class Program
     static string enter = "Press any key to continue...";
     static string cpuid = Convert.ToString(Microsoft.Win32.Registry.GetValue("HKEY_LOCAL_MACHINE\\HARDWARE\\DESCRIPTION\\SYSTEM\\CentralProcessor\\0", "ProcessorNameString", null)).Trim(); //Remove when using Other OS
     static string asciirps = "    _______               _______                     _______\r\n---'   ____)         ---'    ____)____            ---'   ____)____\r\n      (_____)                   ______)                     ______)\r\n      (_____)                  _______)                 __________)\r\n      (____)                  _______)                  (____)\r\n---.__(___)           ---.__________)             ---.__(___)\r\nROCK                  PAPER                       Scissors";
+    static int MinHeight = 1024;
+    static int MinWidth = 768;
     static int PC = 0;
     static int P1 = 0;
     static int P2 = 0;
@@ -22,7 +24,7 @@ class Program
     {
         try
         {
-            Console.WriteLine("Initializing Rock Paper Scissors.... \nCreated by Group 9 - v2");
+            Console.WriteLine("Initializing Rock Paper Scissors.... \nCreated by Group 9 - v3");
             Thread.Sleep(1000);
             do
             {
