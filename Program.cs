@@ -5,20 +5,20 @@ using System.Threading;
 
 class Program
 {
+    //ASCII ART very messy 
     static string clap = "                    clap                                                 \r\n                                          clap                           \r\n                                                                         \r\n                         Clap      clap                                  \r\n                  clap                                                   \r\n          clap              clap    clap      Clap                       \r\n                      clap                                               \r\n                  clap       clap         clap                           \r\n                          ,         clap                                 \r\n                 clap   clap   Clap        clap                          \r\n           clap                 .  \\  `                                  \r\n                  Clap   \\ ( (\\  ) /                                     \r\n                       `  ` / _\\      ,                                  \r\n                            \\(\")                                         \r\n                  ___    .-  )=|                                         \r\n                 (`  ') ' _  /'|                                         \r\n                 |-n___n '  (/\\|                                         \r\n  a:f____________|_L___J__ <   L _______________________ ";
-    static bool gamestat = true;
-    static string enter = "Press any key to continue...";
-    static string cpuid = Convert.ToString(Microsoft.Win32.Registry.GetValue("HKEY_LOCAL_MACHINE\\HARDWARE\\DESCRIPTION\\SYSTEM\\CentralProcessor\\0", "ProcessorNameString", null)).Trim(); //Remove when using Other OS
+    static string RPS = "  _____            _      _____                         _____      _                        \r\n |  __ \\          | |    |  __ \\                       / ____|    (_)                       \r\n | |__) |___   ___| | __ | |__) |_ _ _ __   ___ _ __  | (___   ___ _ ___ ___  ___  _ __ ___ \r\n |  _  // _ \\ / __| |/ / |  ___/ _` | '_ \\ / _ \\ '__|  \\___ \\ / __| / __/ __|/ _ \\| '__/ __|\r\n | | \\ \\ (_) | (__|   <  | |  | (_| | |_) |  __/ |     ____) | (__| \\__ \\__ \\ (_) | |  \\__ \\\r\n |_|  \\_\\___/ \\___|_|\\_\\ |_|   \\__,_| .__/ \\___|_|    |_____/ \\___|_|___/___/\\___/|_|  |___/ V 3.5 (stable)\r\n                                    | |                                                     \r\n                                    |_|                                                     ";
     static string asciirps = "    _______               _______                     _______\r\n---'   ____)         ---'    ____)____            ---'   ____)____\r\n      (_____)                   ______)                     ______)\r\n      (_____)                  _______)                 __________)\r\n      (____)                  _______)                  (____)\r\n---.__(___)           ---.__________)             ---.__(___)\r\nROCK                  PAPER                       Scissors";
-    static int MinHeight = 1024;
-    static int MinWidth = 768;
+    static string enter = "Press any key to continue...";
+
+    // Remove when using Other OS or just replace with "string cpuid = "Other OS";"
+    static string cpuid = Convert.ToString(Microsoft.Win32.Registry.GetValue("HKEY_LOCAL_MACHINE\\HARDWARE\\DESCRIPTION\\SYSTEM\\CentralProcessor\\0", "ProcessorNameString", null)).Trim();
     static int PC = 0;
     static int P1 = 0;
     static int P2 = 0;
     static int CPU = 0;
     static int modesel = 0;
     static string err = "LOG: Error Occured, Invalid Input Detected..";
-    static string RPS = "  _____            _      _____                         _____      _                        \r\n |  __ \\          | |    |  __ \\                       / ____|    (_)                       \r\n | |__) |___   ___| | __ | |__) |_ _ _ __   ___ _ __  | (___   ___ _ ___ ___  ___  _ __ ___ \r\n |  _  // _ \\ / __| |/ / |  ___/ _` | '_ \\ / _ \\ '__|  \\___ \\ / __| / __/ __|/ _ \\| '__/ __|\r\n | | \\ \\ (_) | (__|   <  | |  | (_| | |_) |  __/ |     ____) | (__| \\__ \\__ \\ (_) | |  \\__ \\\r\n |_|  \\_\\___/ \\___|_|\\_\\ |_|   \\__,_| .__/ \\___|_|    |_____/ \\___|_|___/___/\\___/|_|  |___/ V 3.5 (stable)\r\n                                    | |                                                     \r\n                                    |_|                                                     ";
 
     static void Main()
     {
@@ -73,6 +73,7 @@ class Program
                     Random rnd = new Random();
                     int choicerndm = rnd.Next(choices.Length);
                     string answer = choices[choicerndm];
+
                     Console.Write($"\nPick your Hero: \n{asciirps}");
                     Console.Write("\n\nEnter a Value: ");
                     string Pl1 = Console.ReadLine().Trim(); //A Precautionary Action just incase the user puts space in the value
@@ -97,7 +98,7 @@ class Program
                         Console.Write($"\n{clap}\n\nIt's a Tie Try Again, Do you want to Continue? Y/N ");
                         if (Console.ReadKey().Key == ConsoleKey.N)
                         {
-                            Console.Write("\n"+enter);
+                            Console.Write("\n" + enter);
                             break;
                         }
                         else
