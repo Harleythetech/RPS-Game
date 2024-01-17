@@ -235,7 +235,7 @@ class Program
 
 
 
-            } while (Console.ReadKey().Key != ConsoleKey.Y && modesel != 3);
+            } while (modesel != 3 || Console.ReadKey().Key != ConsoleKey.Y );
         }
         catch (Exception ex)
         {
