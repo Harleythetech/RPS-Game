@@ -6,8 +6,9 @@ using System.Threading;
 class Program
 {
     //ASCII ART very messy 
+    static string relver = "v3.5.r4 (Stable Release)";
     static string clap = "                    clap                                                 \r\n                                          clap                           \r\n                                                                         \r\n                         Clap      clap                                  \r\n                  clap                                                   \r\n          clap              clap    clap      Clap                       \r\n                      clap                                               \r\n                  clap       clap         clap                           \r\n                          ,         clap                                 \r\n                 clap   clap   Clap        clap                          \r\n           clap                 .  \\  `                                  \r\n                  Clap   \\ ( (\\  ) /                                     \r\n                       `  ` / _\\      ,                                  \r\n                            \\(\")                                         \r\n                  ___    .-  )=|                                         \r\n                 (`  ') ' _  /'|                                         \r\n                 |-n___n '  (/\\|                                         \r\n  a:f____________|_L___J__ <   L _______________________ ";
-    static string RPS = "  _____            _      _____                         _____      _                        \r\n |  __ \\          | |    |  __ \\                       / ____|    (_)                       \r\n | |__) |___   ___| | __ | |__) |_ _ _ __   ___ _ __  | (___   ___ _ ___ ___  ___  _ __ ___ \r\n |  _  // _ \\ / __| |/ / |  ___/ _` | '_ \\ / _ \\ '__|  \\___ \\ / __| / __/ __|/ _ \\| '__/ __|\r\n | | \\ \\ (_) | (__|   <  | |  | (_| | |_) |  __/ |     ____) | (__| \\__ \\__ \\ (_) | |  \\__ \\\r\n |_|  \\_\\___/ \\___|_|\\_\\ |_|   \\__,_| .__/ \\___|_|    |_____/ \\___|_|___/___/\\___/|_|  |___/ V 3.5 (stable)\r\n                                    | |                                                     \r\n                                    |_|                                                     ";
+    static string RPS = $"  _____            _      _____                         _____      _                        \r\n |  __ \\          | |    |  __ \\                       / ____|    (_)                       \r\n | |__) |___   ___| | __ | |__) |_ _ _ __   ___ _ __  | (___   ___ _ ___ ___  ___  _ __ ___ \r\n |  _  // _ \\ / __| |/ / |  ___/ _` | '_ \\ / _ \\ '__|  \\___ \\ / __| / __/ __|/ _ \\| '__/ __|\r\n | | \\ \\ (_) | (__|   <  | |  | (_| | |_) |  __/ |     ____) | (__| \\__ \\__ \\ (_) | |  \\__ \\\r\n |_|  \\_\\___/ \\___|_|\\_\\ |_|   \\__,_| .__/ \\___|_|    |_____/ \\___|_|___/___/\\___/|_|  |___/ {relver}\r\n                                    | |                                                     \r\n                                    |_|                                                     ";
     static string asciirps = "    _______               _______                     _______\r\n---'   ____)         ---'    ____)____            ---'   ____)____\r\n      (_____)                   ______)                     ______)\r\n      (_____)                  _______)                 __________)\r\n      (____)                  _______)                  (____)\r\n---.__(___)           ---.__________)             ---.__(___)\r\nROCK                  PAPER                       Scissors";
     static string enter = "Press any key to continue...";
 
@@ -24,7 +25,7 @@ class Program
     {
         try
         {
-            Console.WriteLine("Initializing Rock Paper Scissors.... \nCreated by Group 9 - v3.5 (Stable Release) \n\nRelease: https://github.com/Harleythetech/RPS-Game/releases/latest");
+            Console.WriteLine($"Initializing Rock Paper Scissors.... \nCreated by Group 9 - {relver} \n\nRelease: https://github.com/Harleythetech/RPS-Game/releases/latest");
             Thread.Sleep(3000);
             do
             {
@@ -239,6 +240,7 @@ class Program
         }
         catch (Exception ex)
         {
+            Console.WriteLine($"{RPS}");
             Console.WriteLine($"LOG:{ex.Message}");
         }
     }
