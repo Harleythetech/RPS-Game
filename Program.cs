@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 using System.Threading;
 
@@ -13,7 +14,7 @@ class Program
     static string enter = "Press any key to continue...";
 
     // Remove when using Other OS or just replace with "string cpuid = "Other OS";"
-    static string cpuid = Convert.ToString(Microsoft.Win32.Registry.GetValue("HKEY_LOCAL_MACHINE\\HARDWARE\\DESCRIPTION\\SYSTEM\\CentralProcessor\\0", "ProcessorNameString", null)).Trim();
+    static string cpuid = "";
     static int PC = 0;
     static int P1 = 0;
     static int P2 = 0;
@@ -25,6 +26,14 @@ class Program
     {
         try
         {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                cpuid = Convert.ToString(Microsoft.Win32.Registry.GetValue("HKEY_LOCAL_MACHINE\\HARDWARE\\DESCRIPTION\\SYSTEM\\CentralProcessor\\0", "ProcessorNameString", null)).Trim() + " " + RuntimeInformation.OSArchitecture;
+            }
+            else
+            {
+                cpuid = "Other OS Detected, CPU Detection Disabled.";
+            }
             Console.WriteLine($"Initializing Rock Paper Scissors.... \nCreated by Group 9 - {relver} \n\nRelease: https://github.com/Harleythetech/RPS-Game/releases/latest");
             Thread.Sleep(3000);
             do
