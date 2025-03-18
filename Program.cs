@@ -34,7 +34,7 @@ class Program
             {
                 cpuid = "Other OS Detected, CPU Detection Disabled.";
             }
-            Console.WriteLine($"Initializing Rock Paper Scissors.... \nCreated by Group 9 - {relver} \n\nRelease: https://github.com/Harleythetech/RPS-Game/releases/latest");
+            Console.WriteLine($"Initializing Rock Paper Scissors.... \nCreated by @Harleythetech - {relver} \n\nRelease: https://github.com/Harleythetech/RPS-Game/releases/latest");
             Thread.Sleep(3000);
             do
             {
